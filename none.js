@@ -4,7 +4,7 @@
 // then dividing by 2, then subtracting 5,
 // Then return the output
 function mindGame(number) {
-    if (number >= 0 && typeof(number) === 'number') {
+    if (number >= 0 && typeof (number) === 'number') {
         let sum = ((((number * 3) + 10) / 2) - 5);
         return sum;
     }

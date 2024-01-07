@@ -4,16 +4,16 @@
 // then dividing by 2, then subtracting 5,
 // Then return the output
 
-function mindGame(number){
-    if(number >= 0 && typeof(number) === 'number'){
+function mindGame(number) {
+    if (number >= 0 && typeof (number) === 'number') {
         let sum = ((((number * 3) + 10) / 2) - 5);
         return sum;
     }
-    else{
+    else {
         let validation = 'Provide a valid number';
         return validation;
     }
-    
+
 }
 
 let hi = mindGame(33);
@@ -25,18 +25,18 @@ console.log(hi);
 // If the length of the string is even then it returns even,
 // If the length of thr string is odd then it returns odd.
 
-function evenOdd(inputString){
-    if(typeof(inputString) === 'string'){
-        if(inputString.length % 2 === 0){
+function evenOdd(inputString) {
+    if (typeof (inputString) === 'string') {
+        if (inputString.length % 2 === 0) {
             let evenOrOdd = 'even';
             return evenOrOdd;
         }
-        else if(inputString.length % 2 === 1){
+        else if (inputString.length % 2 === 1) {
             let evenOrOdd = 'odd';
             return evenOrOdd;
         }
     }
-    else{
+    else {
         let validation = 'Please provide a string';
         return validation;
     }
@@ -54,18 +54,18 @@ console.log(ans);
 // If the number is less then 7, then it returns the substraction
 // owtherwise, it returns the the double or the number.
 
-function isLGSeven(number){
-    if(typeof(number) == 'number'){
+function isLGSeven(number) {
+    if (typeof (number) == 'number') {
         const substruction = number - 7;
-        if(substruction < 7){
+        if (substruction < 7) {
             return substruction;
         }
-        else if(substruction >= 7){
+        else if (substruction >= 7) {
             let doubleOfTheNum = number * 2;
             return doubleOfTheNum;
         }
     }
-    else{
+    else {
         let validation = 'Provide a number';
         return validation;
     }
@@ -80,20 +80,20 @@ console.log(ans2);
 // This function takes an aray.
 // It returns the quantity of negative numbers.
 
-function findingBadData(arrayOfNumber){
-    if(Array.isArray(arrayOfNumber) === true){
+function findingBadData(arrayOfNumber) {
+    if (Array.isArray(arrayOfNumber) === true) {
         let numOfBadData = 0;
-        for(let i = 0; i < arrayOfNumber.length; i++){
+        for (let i = 0; i < arrayOfNumber.length; i++) {
             let element = arrayOfNumber[i];
             let badData = element < 0;
             let goodData = element >= 0;
-            if(badData){
+            if (badData) {
                 numOfBadData++;
             }
         }
         return numOfBadData;
     }
-    else{
+    else {
         let validation = 'Please provid an Array of number';
         return validation;
     }
@@ -113,9 +113,9 @@ console.log(ans3);
 // if total diamond is greather than 1000 * 2 ,
 // then it returns remaining diamond by subtracting 2000 with total diamond. otherwise, it returns the total number.
 
-function gemsToDiamond(gemNumOfF1, gemNumOfF2, gemNumOfF3){
-    
-    if(typeof(gemNumOfF1) == 'number' && typeof(gemNumOfF2) == 'number' && typeof(gemNumOfF3) == 'number'){
+function gemsToDiamond(gemNumOfF1, gemNumOfF2, gemNumOfF3) {
+
+    if (typeof (gemNumOfF1) == 'number' && typeof (gemNumOfF2) == 'number' && typeof (gemNumOfF3) == 'number') {
         let f1GemPower = 21;
         let f2GemPower = 32;
         let f3GemPower = 43;
@@ -123,11 +123,11 @@ function gemsToDiamond(gemNumOfF1, gemNumOfF2, gemNumOfF3){
         let f2Diamond = gemNumOfF2 * f2GemPower;
         let f3Diamond = gemNumOfF3 * f3GemPower;
         let totalDiamond = f1Diamond + f2Diamond + f3Diamond;
-        if(totalDiamond >= (1000 * 2)){
+        if (totalDiamond >= (1000 * 2)) {
             let remainingDiamond = totalDiamond - 2000;
             return remainingDiamond;
         }
-        else{
+        else {
             return totalDiamond;
         }
     }
